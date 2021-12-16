@@ -1,0 +1,36 @@
+{
+  "canisters": {
+    "flashphaser": {
+      "candid": "src/flashphaser/ic_rush.did",
+      "package": "flashphaser",
+      "type": "rust"
+    },
+    "flashphaser_assets": {
+      "dependencies": [
+        "flashphaser"
+      ],
+      "frontend": {
+        "entrypoint": "src/flashphaser_assets/src/index.html"
+      },
+      "source": [
+        "src/flashphaser_assets/assets",
+        "dist/flashphaser_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
